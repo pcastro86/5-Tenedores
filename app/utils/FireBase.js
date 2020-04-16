@@ -1,7 +1,7 @@
 import firebase from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "*********************",
+  apiKey: "*********************s",
   authDomain: "tenedores-eede3.firebaseapp.com",
   databaseURL: "https://tenedores-eede3.firebaseio.com",
   projectId: "tenedores-eede3",
