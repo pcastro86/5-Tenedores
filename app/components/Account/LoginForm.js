@@ -13,6 +13,7 @@ function LoginForm(props) {
   const [isVisibleLoading, setIsvisibleLoading] = useState(false);
   const { toastRef, navigation } = props;
 
+
   const login = async () => {
     setIsvisibleLoading(true);
     if (!email || !pass) {
@@ -71,7 +72,7 @@ function LoginForm(props) {
         buttonStyle={styles.btnForm}
         onPress={login}
       />
-      <Loading text="Creando cuenta" isVisible={isVisibleLoading} />
+      <Loading text="Iniciando sesion" isVisible={isVisibleLoading} />
     </View>
   );
 }

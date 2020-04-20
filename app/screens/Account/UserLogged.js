@@ -6,19 +6,19 @@ import InfoUser from "../../components/Account/InfoUser";
 
 export default function UserLogged(){
   const [infoUser, setInfoUser] = useState({})
-
+  const [reloadData, setreloadData] = useState(false)
   useEffect(() => {
     (async () => {
       const user = await firebase.auth().currentUser;
       setInfoUser(user.providerData[0])
     })();
-    return () => {
-      cleanup
-    }
+    setreloadData(false)
   }, [])
+
+
   return (
     <View>
-    <InfoUser userInfo={infoUser}/>
+     <InfoUser userInfo={infoUser}/>
     <Button title="cerrar sesion" onPress={() => firebase.auth().signOut()} />
     </View>
   )
